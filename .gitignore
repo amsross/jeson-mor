@@ -1,6 +1,6 @@
 .DS_Store
 .bsb.lock
 .merlin
-/build/
+/dist/
 /lib/
 /node_modules/

@@ -2,11 +2,14 @@
   "name": "jeson-mor",
   "version": "0.0.1",
   "scripts": {
+    "prestart": "npm run clean",
+    "start": "rescript build -w",
     "server": "webpack serve",
-    "bundle": "webpack build",
-    "build": "rescript",
     "clean": "rescript clean -with-deps && rm -rf ./build",
-    "start": "rescript build -w"
+    "prebuild": "npm run clean",
+    "build": "rescript",
+    "prebundle": "npm run build",
+    "bundle": "webpack build"
   },
   "keywords": [
     "rescript"
