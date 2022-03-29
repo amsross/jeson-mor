@@ -10,12 +10,9 @@ let make = (~color: [#White | #Black]) => {
   | #Black => "bg-black"
   }
 
-  let className =
-    [
-      "w2 h2 ba br-100 bg-near-black top-1 left-1 relative",
-      bgColor,
-      borderColor,
-    ]->Js.Array2.joinWith(" ")
+  let className = ["ba br-100 bg-near-black", bgColor, borderColor]->Js.Array2.joinWith(" ")
 
-  <div className />
+  let style = ReactDOMStyle.make(~width="50%", ~paddingTop="50%", ())
+
+  <div className style />
 }

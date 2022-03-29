@@ -67,7 +67,7 @@ let make = (~row: int, ~column: int, ~piece: option<[#White | #Black]>) => {
 
   let className =
     [
-      "w3 h3 ba hide-child b--light-gray",
+      "w3 h3 ba hide-child b--light-gray flex items-center justify-center",
       bgColor,
       column === 0 ? "" : " bl-0",
       row === 0 ? "" : " bt-0",
